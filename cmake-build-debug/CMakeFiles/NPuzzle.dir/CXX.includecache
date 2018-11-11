@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/ppanchen/Projects/NPuzzle/headers/Board.h
+CommonTools.h
+/Users/ppanchen/Projects/NPuzzle/headers/CommonTools.h
+set
+-
+iostream
+-
+
+/Users/ppanchen/Projects/NPuzzle/headers/CommonTools.h
+memory
+-
+vector
+-
+
+/Users/ppanchen/Projects/NPuzzle/headers/Solver.h
+Board.h
+/Users/ppanchen/Projects/NPuzzle/headers/Board.h
+list
+/Users/ppanchen/Projects/NPuzzle/headers/list
+
+/Users/ppanchen/Projects/NPuzzle/sources/main.cpp
+iostream
+-
+../headers/Solver.h
+/Users/ppanchen/Projects/NPuzzle/headers/Solver.h
+assert.h
+-
+
