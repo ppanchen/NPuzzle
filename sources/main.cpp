@@ -12,9 +12,9 @@ int main(int argc, char* argv[])
         {7, 6, 5}
     };
 
-    Board::staticInit(3);
-    Board *initial = new Board(blocks);
-    Solver *solver = new Solver(*initial);
+    Board::staticInit(3, Algorithm::Hamming);
+//    Board *initial = new Board(blocks);
+    Solver *solver = new Solver(std::make_shared<Board>(blocks));
     for (auto boards : solver->solution())
     {
         std::cout << boards;

@@ -7,14 +7,23 @@
 #include "CommonTools.h"
 #include <set>
 #include <iostream>
+#include <map>
 
 using Matrix = std::vector<std::vector<int>>;
+
+enum Algorithm
+{
+    Manhattan = 1,
+    Hamming,
+    Own
+};
 
 class Board
 {
 private:
     static Matrix _aimBlocks;
     static int _size;
+    static Algorithm _algorithmFlag;
 
     Matrix _blocks;
     int _zeroX = 0;
@@ -26,7 +35,7 @@ public:
 
     Board(Matrix blocks);
 
-//    Board(const Board &b2);
+//    Board(const Board *b2);
 
     int dimension() const { return (int)_blocks.size(); }
 
@@ -36,9 +45,9 @@ public:
 
     bool operator==(const Board& other) const;
 
-    std::set<Board*> neighbors();
+    std::set<std::shared_ptr<Board>> neighbors();
 
-    static void staticInit(unsigned size);
+    static void staticInit(unsigned size, Algorithm algorithmFlag);
 
     friend std::ostream& operator<<(std::ostream& os, const Board& board);
 
@@ -47,7 +56,9 @@ private:
 
     Matrix getNewBlock();
 
-    Board* swap(Matrix blocks2, int x1, int y1, int x2, int y2);
+    std::shared_ptr<Board> swap(Matrix blocks2, int x1, int y1, int x2, int y2);
+
+    int Manhattan(int, int);
 
 
 };
