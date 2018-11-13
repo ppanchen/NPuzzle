@@ -7,12 +7,13 @@
 
 int Board::_size = 0;
 Matrix Board::_aimBlocks;
+Algorithm Board::_algorithmFlag;
 
 /// Copy constructor
 /// \param b2 - instance to be copied
-//Board::Board(const Board &b2)
+//Board::Board(const Board *b2)
 //{
-//    init(b2._blocks);
+//    init(b2->_blocks);
 //}
 
 Board::Board(Matrix blocks)
@@ -29,9 +30,9 @@ bool Board::operator==(const Board& other) const
     return result;
 }
 
-std::set<Board*> Board::neighbors()
+std::set<std::shared_ptr<Board>> Board::neighbors()
 {
-    std::set<Board*> boardList;
+    std::set<std::shared_ptr<Board>> boardList;
     boardList.insert(swap(getNewBlock(), _zeroX, _zeroY, _zeroX, _zeroY + 1));
     boardList.insert(swap(getNewBlock(), _zeroX, _zeroY, _zeroX, _zeroY - 1));
     boardList.insert(swap(getNewBlock(), _zeroX, _zeroY, _zeroX - 1, _zeroY));
@@ -40,8 +41,9 @@ std::set<Board*> Board::neighbors()
     return boardList;
 }
 
-void Board::staticInit(unsigned size)
+void Board::staticInit(unsigned size, Algorithm algoFlag)
 {
+    _algorithmFlag = algoFlag;
     _size = size;
 
     if (_aimBlocks.empty())
@@ -116,8 +118,16 @@ void Board::init(const Matrix &block)
     {
         for (int j = 0; j < _blocks[i].size(); j++)
         {
-            if (_blocks[i][j] != _aimBlocks[i][j] && _blocks[i][j] != 0)
-                _h += 1;
+            switch (Board::_algorithmFlag)
+            {
+                case Algorithm::Manhattan:
+                    _h += 10;
+                case Algorithm::Hamming:
+                    if (_blocks[i][j] != _aimBlocks[i][j] && _blocks[i][j] != 0)
+                        _h += 1;
+                case Algorithm::Own:
+                    ;
+            }
             if (_blocks[i][j] == 0)
             {
                 _zeroX = i;
@@ -127,20 +137,19 @@ void Board::init(const Matrix &block)
     }
 }
 
-
 Matrix Board::getNewBlock()
 {
     return Matrix(_blocks);
 }
 
-Board* Board::swap(Matrix blocks2, int x1, int y1, int x2, int y2)
+std::shared_ptr<Board> Board::swap(Matrix blocks2, int x1, int y1, int x2, int y2)
 {
     if (x2 > -1 && x2 < dimension() && y2 > -1 && y2 < dimension())
     {
         int t = blocks2[x2][y2];
         blocks2[x2][y2] = blocks2[x1][y1];
         blocks2[x1][y1] = t;
-        return new Board(blocks2);
+        return std::make_shared<Board>(blocks2);
     }
     else
         return nullptr;
@@ -159,4 +168,9 @@ std::ostream& operator<<(std::ostream& os, const Board& board)
         os << std::endl;
     }
     return os;
+}
+
+int Board::Manhattan(int, int)
+{
+    return 0;
 }
