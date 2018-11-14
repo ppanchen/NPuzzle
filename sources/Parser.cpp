@@ -35,8 +35,8 @@ Parser::Parser(int argc, char **argv)
                 _algo = Algorithm::Manhattan;
             else if (equals(algoName, "Hamming") || equals(algoName, "2"))
                 _algo = Algorithm::Hamming;
-            else if (equals(algoName, "Own") || equals(algoName, "3"))
-                _algo = Algorithm::Own;
+            else if (equals(algoName, "Euclidean") || equals(algoName, "3"))
+                _algo = Algorithm::Euclidean;
         }
 
         else if (equals(argument, supportedArgs[2])) //-HELP processing
