@@ -3,6 +3,7 @@
 //
 
 #include "../headers/Solver.h"
+#include "../headers/Logger.h"
 #include <functional>
 #include <queue>
 #include <vector>
@@ -10,9 +11,9 @@
 
 Solver::Solver(std::shared_ptr<Board> initial)
 {
-    this->initial = initial;
+    this->_initial = initial;
 
-    if(!isSolvable())
+    if(!initial->isSolvable())
         return;
 
     auto tmp = [](std::shared_ptr<Item> i1, std::shared_ptr<Item> i2)
@@ -31,7 +32,8 @@ Solver::Solver(std::shared_ptr<Board> initial)
     while (true)
     {
         std::shared_ptr<Item> board = priorityQueue.top();
-
+        std::cout << *(board->_board) << std::endl;
+        std::getchar();
         if(board->_board->isGoal()) {
             itemToList(Item(board, board->_board));
             return;
@@ -52,7 +54,7 @@ Solver::Solver(std::shared_ptr<Board> initial)
 
 bool Solver::isSolvable()
 {
-    return true;
+    return _initial->isSolvable();
 }
 
 int Solver::moves()
@@ -75,6 +77,7 @@ int Solver::listDepth(Solver::Item item)
     {
         c++;
         item2 = item2->_prevBoard.get();
+        Logger::timeCount++;
         if(item2 == nullptr)
         {
             return c;
@@ -88,11 +91,12 @@ void Solver::itemToList(Solver::Item item)
     while (true)
     {
         item2 = item2->_prevBoard.get();
+        Logger::timeCount++;
         if (item2 == nullptr)
         {
             return;
         }
-        result.push_back(*(item2->_board));
+        result.push_front(*(item2->_board));
     }
 }
 
@@ -104,6 +108,7 @@ bool Solver::containsInPath(Solver::Item item, Board board)
         if (*item2->_board == board)
             return true;
         item2 = item2->_prevBoard.get();
+        Logger::timeCount++;
         if (item2 == nullptr)
             return false;
     }

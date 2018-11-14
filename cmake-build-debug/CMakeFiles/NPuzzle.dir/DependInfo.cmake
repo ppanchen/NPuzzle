@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/ppanchen/Projects/NPuzzle/sources/Board.cpp" "/Users/ppanchen/Projects/NPuzzle/cmake-build-debug/CMakeFiles/NPuzzle.dir/sources/Board.cpp.o"
-  "/Users/ppanchen/Projects/NPuzzle/sources/CommonTools.cpp" "/Users/ppanchen/Projects/NPuzzle/cmake-build-debug/CMakeFiles/NPuzzle.dir/sources/CommonTools.cpp.o"
-  "/Users/ppanchen/Projects/NPuzzle/sources/Drawer.cpp" "/Users/ppanchen/Projects/NPuzzle/cmake-build-debug/CMakeFiles/NPuzzle.dir/sources/Drawer.cpp.o"
-  "/Users/ppanchen/Projects/NPuzzle/sources/Solver.cpp" "/Users/ppanchen/Projects/NPuzzle/cmake-build-debug/CMakeFiles/NPuzzle.dir/sources/Solver.cpp.o"
-  "/Users/ppanchen/Projects/NPuzzle/sources/main.cpp" "/Users/ppanchen/Projects/NPuzzle/cmake-build-debug/CMakeFiles/NPuzzle.dir/sources/main.cpp.o"
+  "/Users/ppanchen/Projects/NPuzzle_git/sources/Board.cpp" "/Users/ppanchen/Projects/NPuzzle_git/cmake-build-debug/CMakeFiles/NPuzzle.dir/sources/Board.cpp.o"
+  "/Users/ppanchen/Projects/NPuzzle_git/sources/Logger.cpp" "/Users/ppanchen/Projects/NPuzzle_git/cmake-build-debug/CMakeFiles/NPuzzle.dir/sources/Logger.cpp.o"
+  "/Users/ppanchen/Projects/NPuzzle_git/sources/Parser.cpp" "/Users/ppanchen/Projects/NPuzzle_git/cmake-build-debug/CMakeFiles/NPuzzle.dir/sources/Parser.cpp.o"
+  "/Users/ppanchen/Projects/NPuzzle_git/sources/Solver.cpp" "/Users/ppanchen/Projects/NPuzzle_git/cmake-build-debug/CMakeFiles/NPuzzle.dir/sources/Solver.cpp.o"
+  "/Users/ppanchen/Projects/NPuzzle_git/sources/main.cpp" "/Users/ppanchen/Projects/NPuzzle_git/cmake-build-debug/CMakeFiles/NPuzzle.dir/sources/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
