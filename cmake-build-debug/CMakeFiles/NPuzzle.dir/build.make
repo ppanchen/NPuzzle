@@ -43,10 +43,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/ppanchen/Projects/NPuzzle
+CMAKE_SOURCE_DIR = /Users/ppanchen/Projects/NPuzzle_git
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/ppanchen/Projects/NPuzzle/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/ppanchen/Projects/NPuzzle_git/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/NPuzzle.dir/depend.make
@@ -59,76 +59,76 @@ include CMakeFiles/NPuzzle.dir/flags.make
 
 CMakeFiles/NPuzzle.dir/sources/main.cpp.o: CMakeFiles/NPuzzle.dir/flags.make
 CMakeFiles/NPuzzle.dir/sources/main.cpp.o: ../sources/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ppanchen/Projects/NPuzzle/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/NPuzzle.dir/sources/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/NPuzzle.dir/sources/main.cpp.o -c /Users/ppanchen/Projects/NPuzzle/sources/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ppanchen/Projects/NPuzzle_git/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/NPuzzle.dir/sources/main.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/NPuzzle.dir/sources/main.cpp.o -c /Users/ppanchen/Projects/NPuzzle_git/sources/main.cpp
 
 CMakeFiles/NPuzzle.dir/sources/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NPuzzle.dir/sources/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ppanchen/Projects/NPuzzle/sources/main.cpp > CMakeFiles/NPuzzle.dir/sources/main.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ppanchen/Projects/NPuzzle_git/sources/main.cpp > CMakeFiles/NPuzzle.dir/sources/main.cpp.i
 
 CMakeFiles/NPuzzle.dir/sources/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NPuzzle.dir/sources/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ppanchen/Projects/NPuzzle/sources/main.cpp -o CMakeFiles/NPuzzle.dir/sources/main.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ppanchen/Projects/NPuzzle_git/sources/main.cpp -o CMakeFiles/NPuzzle.dir/sources/main.cpp.s
 
 CMakeFiles/NPuzzle.dir/sources/Board.cpp.o: CMakeFiles/NPuzzle.dir/flags.make
 CMakeFiles/NPuzzle.dir/sources/Board.cpp.o: ../sources/Board.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ppanchen/Projects/NPuzzle/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/NPuzzle.dir/sources/Board.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/NPuzzle.dir/sources/Board.cpp.o -c /Users/ppanchen/Projects/NPuzzle/sources/Board.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ppanchen/Projects/NPuzzle_git/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/NPuzzle.dir/sources/Board.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/NPuzzle.dir/sources/Board.cpp.o -c /Users/ppanchen/Projects/NPuzzle_git/sources/Board.cpp
 
 CMakeFiles/NPuzzle.dir/sources/Board.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NPuzzle.dir/sources/Board.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ppanchen/Projects/NPuzzle/sources/Board.cpp > CMakeFiles/NPuzzle.dir/sources/Board.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ppanchen/Projects/NPuzzle_git/sources/Board.cpp > CMakeFiles/NPuzzle.dir/sources/Board.cpp.i
 
 CMakeFiles/NPuzzle.dir/sources/Board.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NPuzzle.dir/sources/Board.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ppanchen/Projects/NPuzzle/sources/Board.cpp -o CMakeFiles/NPuzzle.dir/sources/Board.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ppanchen/Projects/NPuzzle_git/sources/Board.cpp -o CMakeFiles/NPuzzle.dir/sources/Board.cpp.s
 
 CMakeFiles/NPuzzle.dir/sources/Solver.cpp.o: CMakeFiles/NPuzzle.dir/flags.make
 CMakeFiles/NPuzzle.dir/sources/Solver.cpp.o: ../sources/Solver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ppanchen/Projects/NPuzzle/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/NPuzzle.dir/sources/Solver.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/NPuzzle.dir/sources/Solver.cpp.o -c /Users/ppanchen/Projects/NPuzzle/sources/Solver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ppanchen/Projects/NPuzzle_git/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/NPuzzle.dir/sources/Solver.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/NPuzzle.dir/sources/Solver.cpp.o -c /Users/ppanchen/Projects/NPuzzle_git/sources/Solver.cpp
 
 CMakeFiles/NPuzzle.dir/sources/Solver.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NPuzzle.dir/sources/Solver.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ppanchen/Projects/NPuzzle/sources/Solver.cpp > CMakeFiles/NPuzzle.dir/sources/Solver.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ppanchen/Projects/NPuzzle_git/sources/Solver.cpp > CMakeFiles/NPuzzle.dir/sources/Solver.cpp.i
 
 CMakeFiles/NPuzzle.dir/sources/Solver.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NPuzzle.dir/sources/Solver.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ppanchen/Projects/NPuzzle/sources/Solver.cpp -o CMakeFiles/NPuzzle.dir/sources/Solver.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ppanchen/Projects/NPuzzle_git/sources/Solver.cpp -o CMakeFiles/NPuzzle.dir/sources/Solver.cpp.s
 
-CMakeFiles/NPuzzle.dir/sources/Drawer.cpp.o: CMakeFiles/NPuzzle.dir/flags.make
-CMakeFiles/NPuzzle.dir/sources/Drawer.cpp.o: ../sources/Drawer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ppanchen/Projects/NPuzzle/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/NPuzzle.dir/sources/Drawer.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/NPuzzle.dir/sources/Drawer.cpp.o -c /Users/ppanchen/Projects/NPuzzle/sources/Drawer.cpp
+CMakeFiles/NPuzzle.dir/sources/Logger.cpp.o: CMakeFiles/NPuzzle.dir/flags.make
+CMakeFiles/NPuzzle.dir/sources/Logger.cpp.o: ../sources/Logger.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ppanchen/Projects/NPuzzle_git/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/NPuzzle.dir/sources/Logger.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/NPuzzle.dir/sources/Logger.cpp.o -c /Users/ppanchen/Projects/NPuzzle_git/sources/Logger.cpp
 
-CMakeFiles/NPuzzle.dir/sources/Drawer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NPuzzle.dir/sources/Drawer.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ppanchen/Projects/NPuzzle/sources/Drawer.cpp > CMakeFiles/NPuzzle.dir/sources/Drawer.cpp.i
+CMakeFiles/NPuzzle.dir/sources/Logger.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NPuzzle.dir/sources/Logger.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ppanchen/Projects/NPuzzle_git/sources/Logger.cpp > CMakeFiles/NPuzzle.dir/sources/Logger.cpp.i
 
-CMakeFiles/NPuzzle.dir/sources/Drawer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NPuzzle.dir/sources/Drawer.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ppanchen/Projects/NPuzzle/sources/Drawer.cpp -o CMakeFiles/NPuzzle.dir/sources/Drawer.cpp.s
+CMakeFiles/NPuzzle.dir/sources/Logger.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NPuzzle.dir/sources/Logger.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ppanchen/Projects/NPuzzle_git/sources/Logger.cpp -o CMakeFiles/NPuzzle.dir/sources/Logger.cpp.s
 
-CMakeFiles/NPuzzle.dir/sources/CommonTools.cpp.o: CMakeFiles/NPuzzle.dir/flags.make
-CMakeFiles/NPuzzle.dir/sources/CommonTools.cpp.o: ../sources/CommonTools.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ppanchen/Projects/NPuzzle/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/NPuzzle.dir/sources/CommonTools.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/NPuzzle.dir/sources/CommonTools.cpp.o -c /Users/ppanchen/Projects/NPuzzle/sources/CommonTools.cpp
+CMakeFiles/NPuzzle.dir/sources/Parser.cpp.o: CMakeFiles/NPuzzle.dir/flags.make
+CMakeFiles/NPuzzle.dir/sources/Parser.cpp.o: ../sources/Parser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ppanchen/Projects/NPuzzle_git/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/NPuzzle.dir/sources/Parser.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/NPuzzle.dir/sources/Parser.cpp.o -c /Users/ppanchen/Projects/NPuzzle_git/sources/Parser.cpp
 
-CMakeFiles/NPuzzle.dir/sources/CommonTools.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NPuzzle.dir/sources/CommonTools.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ppanchen/Projects/NPuzzle/sources/CommonTools.cpp > CMakeFiles/NPuzzle.dir/sources/CommonTools.cpp.i
+CMakeFiles/NPuzzle.dir/sources/Parser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NPuzzle.dir/sources/Parser.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ppanchen/Projects/NPuzzle_git/sources/Parser.cpp > CMakeFiles/NPuzzle.dir/sources/Parser.cpp.i
 
-CMakeFiles/NPuzzle.dir/sources/CommonTools.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NPuzzle.dir/sources/CommonTools.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ppanchen/Projects/NPuzzle/sources/CommonTools.cpp -o CMakeFiles/NPuzzle.dir/sources/CommonTools.cpp.s
+CMakeFiles/NPuzzle.dir/sources/Parser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NPuzzle.dir/sources/Parser.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ppanchen/Projects/NPuzzle_git/sources/Parser.cpp -o CMakeFiles/NPuzzle.dir/sources/Parser.cpp.s
 
 # Object files for target NPuzzle
 NPuzzle_OBJECTS = \
 "CMakeFiles/NPuzzle.dir/sources/main.cpp.o" \
 "CMakeFiles/NPuzzle.dir/sources/Board.cpp.o" \
 "CMakeFiles/NPuzzle.dir/sources/Solver.cpp.o" \
-"CMakeFiles/NPuzzle.dir/sources/Drawer.cpp.o" \
-"CMakeFiles/NPuzzle.dir/sources/CommonTools.cpp.o"
+"CMakeFiles/NPuzzle.dir/sources/Logger.cpp.o" \
+"CMakeFiles/NPuzzle.dir/sources/Parser.cpp.o"
 
 # External object files for target NPuzzle
 NPuzzle_EXTERNAL_OBJECTS =
@@ -136,11 +136,11 @@ NPuzzle_EXTERNAL_OBJECTS =
 NPuzzle: CMakeFiles/NPuzzle.dir/sources/main.cpp.o
 NPuzzle: CMakeFiles/NPuzzle.dir/sources/Board.cpp.o
 NPuzzle: CMakeFiles/NPuzzle.dir/sources/Solver.cpp.o
-NPuzzle: CMakeFiles/NPuzzle.dir/sources/Drawer.cpp.o
-NPuzzle: CMakeFiles/NPuzzle.dir/sources/CommonTools.cpp.o
+NPuzzle: CMakeFiles/NPuzzle.dir/sources/Logger.cpp.o
+NPuzzle: CMakeFiles/NPuzzle.dir/sources/Parser.cpp.o
 NPuzzle: CMakeFiles/NPuzzle.dir/build.make
 NPuzzle: CMakeFiles/NPuzzle.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ppanchen/Projects/NPuzzle/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable NPuzzle"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ppanchen/Projects/NPuzzle_git/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable NPuzzle"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/NPuzzle.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -153,6 +153,6 @@ CMakeFiles/NPuzzle.dir/clean:
 .PHONY : CMakeFiles/NPuzzle.dir/clean
 
 CMakeFiles/NPuzzle.dir/depend:
-	cd /Users/ppanchen/Projects/NPuzzle/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/ppanchen/Projects/NPuzzle /Users/ppanchen/Projects/NPuzzle /Users/ppanchen/Projects/NPuzzle/cmake-build-debug /Users/ppanchen/Projects/NPuzzle/cmake-build-debug /Users/ppanchen/Projects/NPuzzle/cmake-build-debug/CMakeFiles/NPuzzle.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/ppanchen/Projects/NPuzzle_git/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/ppanchen/Projects/NPuzzle_git /Users/ppanchen/Projects/NPuzzle_git /Users/ppanchen/Projects/NPuzzle_git/cmake-build-debug /Users/ppanchen/Projects/NPuzzle_git/cmake-build-debug /Users/ppanchen/Projects/NPuzzle_git/cmake-build-debug/CMakeFiles/NPuzzle.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/NPuzzle.dir/depend
 

@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/ppanchen/Projects/NPuzzle
+CMAKE_SOURCE_DIR = /Users/ppanchen/Projects/NPuzzle_git
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/ppanchen/Projects/NPuzzle/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/ppanchen/Projects/NPuzzle_git/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ppanchen/Projects/NPuzzle/cmake-build-debug/CMakeFiles /Users/ppanchen/Projects/NPuzzle/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ppanchen/Projects/NPuzzle_git/cmake-build-debug/CMakeFiles /Users/ppanchen/Projects/NPuzzle_git/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ppanchen/Projects/NPuzzle/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ppanchen/Projects/NPuzzle_git/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -150,59 +150,59 @@ sources/Board.cpp.s:
 	$(MAKE) -f CMakeFiles/NPuzzle.dir/build.make CMakeFiles/NPuzzle.dir/sources/Board.cpp.s
 .PHONY : sources/Board.cpp.s
 
-sources/CommonTools.o: sources/CommonTools.cpp.o
+sources/Logger.o: sources/Logger.cpp.o
 
-.PHONY : sources/CommonTools.o
-
-# target to build an object file
-sources/CommonTools.cpp.o:
-	$(MAKE) -f CMakeFiles/NPuzzle.dir/build.make CMakeFiles/NPuzzle.dir/sources/CommonTools.cpp.o
-.PHONY : sources/CommonTools.cpp.o
-
-sources/CommonTools.i: sources/CommonTools.cpp.i
-
-.PHONY : sources/CommonTools.i
-
-# target to preprocess a source file
-sources/CommonTools.cpp.i:
-	$(MAKE) -f CMakeFiles/NPuzzle.dir/build.make CMakeFiles/NPuzzle.dir/sources/CommonTools.cpp.i
-.PHONY : sources/CommonTools.cpp.i
-
-sources/CommonTools.s: sources/CommonTools.cpp.s
-
-.PHONY : sources/CommonTools.s
-
-# target to generate assembly for a file
-sources/CommonTools.cpp.s:
-	$(MAKE) -f CMakeFiles/NPuzzle.dir/build.make CMakeFiles/NPuzzle.dir/sources/CommonTools.cpp.s
-.PHONY : sources/CommonTools.cpp.s
-
-sources/Drawer.o: sources/Drawer.cpp.o
-
-.PHONY : sources/Drawer.o
+.PHONY : sources/Logger.o
 
 # target to build an object file
-sources/Drawer.cpp.o:
-	$(MAKE) -f CMakeFiles/NPuzzle.dir/build.make CMakeFiles/NPuzzle.dir/sources/Drawer.cpp.o
-.PHONY : sources/Drawer.cpp.o
+sources/Logger.cpp.o:
+	$(MAKE) -f CMakeFiles/NPuzzle.dir/build.make CMakeFiles/NPuzzle.dir/sources/Logger.cpp.o
+.PHONY : sources/Logger.cpp.o
 
-sources/Drawer.i: sources/Drawer.cpp.i
+sources/Logger.i: sources/Logger.cpp.i
 
-.PHONY : sources/Drawer.i
+.PHONY : sources/Logger.i
 
 # target to preprocess a source file
-sources/Drawer.cpp.i:
-	$(MAKE) -f CMakeFiles/NPuzzle.dir/build.make CMakeFiles/NPuzzle.dir/sources/Drawer.cpp.i
-.PHONY : sources/Drawer.cpp.i
+sources/Logger.cpp.i:
+	$(MAKE) -f CMakeFiles/NPuzzle.dir/build.make CMakeFiles/NPuzzle.dir/sources/Logger.cpp.i
+.PHONY : sources/Logger.cpp.i
 
-sources/Drawer.s: sources/Drawer.cpp.s
+sources/Logger.s: sources/Logger.cpp.s
 
-.PHONY : sources/Drawer.s
+.PHONY : sources/Logger.s
 
 # target to generate assembly for a file
-sources/Drawer.cpp.s:
-	$(MAKE) -f CMakeFiles/NPuzzle.dir/build.make CMakeFiles/NPuzzle.dir/sources/Drawer.cpp.s
-.PHONY : sources/Drawer.cpp.s
+sources/Logger.cpp.s:
+	$(MAKE) -f CMakeFiles/NPuzzle.dir/build.make CMakeFiles/NPuzzle.dir/sources/Logger.cpp.s
+.PHONY : sources/Logger.cpp.s
+
+sources/Parser.o: sources/Parser.cpp.o
+
+.PHONY : sources/Parser.o
+
+# target to build an object file
+sources/Parser.cpp.o:
+	$(MAKE) -f CMakeFiles/NPuzzle.dir/build.make CMakeFiles/NPuzzle.dir/sources/Parser.cpp.o
+.PHONY : sources/Parser.cpp.o
+
+sources/Parser.i: sources/Parser.cpp.i
+
+.PHONY : sources/Parser.i
+
+# target to preprocess a source file
+sources/Parser.cpp.i:
+	$(MAKE) -f CMakeFiles/NPuzzle.dir/build.make CMakeFiles/NPuzzle.dir/sources/Parser.cpp.i
+.PHONY : sources/Parser.cpp.i
+
+sources/Parser.s: sources/Parser.cpp.s
+
+.PHONY : sources/Parser.s
+
+# target to generate assembly for a file
+sources/Parser.cpp.s:
+	$(MAKE) -f CMakeFiles/NPuzzle.dir/build.make CMakeFiles/NPuzzle.dir/sources/Parser.cpp.s
+.PHONY : sources/Parser.cpp.s
 
 sources/Solver.o: sources/Solver.cpp.o
 
@@ -270,12 +270,12 @@ help:
 	@echo "... sources/Board.o"
 	@echo "... sources/Board.i"
 	@echo "... sources/Board.s"
-	@echo "... sources/CommonTools.o"
-	@echo "... sources/CommonTools.i"
-	@echo "... sources/CommonTools.s"
-	@echo "... sources/Drawer.o"
-	@echo "... sources/Drawer.i"
-	@echo "... sources/Drawer.s"
+	@echo "... sources/Logger.o"
+	@echo "... sources/Logger.i"
+	@echo "... sources/Logger.s"
+	@echo "... sources/Parser.o"
+	@echo "... sources/Parser.i"
+	@echo "... sources/Parser.s"
 	@echo "... sources/Solver.o"
 	@echo "... sources/Solver.i"
 	@echo "... sources/Solver.s"

@@ -13,7 +13,7 @@
 class Solver
 {
 private:
-    std::shared_ptr<Board> initial;
+    std::shared_ptr<Board> _initial;
     std::list<Board> result;
 
     struct Item

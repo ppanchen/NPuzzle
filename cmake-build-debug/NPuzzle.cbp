@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/ppanchen/Projects/NPuzzle/cmake-build-debug"/>
+				<Option working_dir="/Users/ppanchen/Projects/NPuzzle_git/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/ppanchen/Projects/NPuzzle/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ppanchen/Projects/NPuzzle/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ppanchen/Projects/NPuzzle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ppanchen/Projects/NPuzzle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ppanchen/Projects/NPuzzle_git/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ppanchen/Projects/NPuzzle_git/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ppanchen/Projects/NPuzzle_git/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ppanchen/Projects/NPuzzle_git/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/ppanchen/Projects/NPuzzle/cmake-build-debug"/>
+				<Option working_dir="/Users/ppanchen/Projects/NPuzzle_git/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/ppanchen/Projects/NPuzzle/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ppanchen/Projects/NPuzzle/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ppanchen/Projects/NPuzzle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ppanchen/Projects/NPuzzle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ppanchen/Projects/NPuzzle_git/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ppanchen/Projects/NPuzzle_git/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ppanchen/Projects/NPuzzle_git/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ppanchen/Projects/NPuzzle_git/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/ppanchen/Projects/NPuzzle/cmake-build-debug"/>
+				<Option working_dir="/Users/ppanchen/Projects/NPuzzle_git/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/ppanchen/Projects/NPuzzle/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ppanchen/Projects/NPuzzle/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ppanchen/Projects/NPuzzle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ppanchen/Projects/NPuzzle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ppanchen/Projects/NPuzzle_git/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ppanchen/Projects/NPuzzle_git/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ppanchen/Projects/NPuzzle_git/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ppanchen/Projects/NPuzzle_git/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="NPuzzle">
-				<Option output="/Users/ppanchen/Projects/NPuzzle/cmake-build-debug/NPuzzle" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/ppanchen/Projects/NPuzzle/cmake-build-debug"/>
+				<Option output="/Users/ppanchen/Projects/NPuzzle_git/cmake-build-debug/NPuzzle" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ppanchen/Projects/NPuzzle_git/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -53,15 +53,15 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/ppanchen/Projects/NPuzzle/cmake-build-debug/Makefile&quot;  VERBOSE=1 NPuzzle"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ppanchen/Projects/NPuzzle/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ppanchen/Projects/NPuzzle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ppanchen/Projects/NPuzzle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ppanchen/Projects/NPuzzle_git/cmake-build-debug/Makefile&quot;  VERBOSE=1 NPuzzle"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ppanchen/Projects/NPuzzle_git/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ppanchen/Projects/NPuzzle_git/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ppanchen/Projects/NPuzzle_git/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="NPuzzle/fast">
-				<Option output="/Users/ppanchen/Projects/NPuzzle/cmake-build-debug/NPuzzle" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/ppanchen/Projects/NPuzzle/cmake-build-debug"/>
+				<Option output="/Users/ppanchen/Projects/NPuzzle_git/cmake-build-debug/NPuzzle" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ppanchen/Projects/NPuzzle_git/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -75,44 +75,44 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/ppanchen/Projects/NPuzzle/cmake-build-debug/Makefile&quot;  VERBOSE=1 NPuzzle/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ppanchen/Projects/NPuzzle/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ppanchen/Projects/NPuzzle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ppanchen/Projects/NPuzzle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ppanchen/Projects/NPuzzle_git/cmake-build-debug/Makefile&quot;  VERBOSE=1 NPuzzle/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ppanchen/Projects/NPuzzle_git/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ppanchen/Projects/NPuzzle_git/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ppanchen/Projects/NPuzzle_git/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/ppanchen/Projects/NPuzzle/headers/Board.h">
+		<Unit filename="/Users/ppanchen/Projects/NPuzzle_git/headers/Board.h">
 			<Option target="NPuzzle"/>
 		</Unit>
-		<Unit filename="/Users/ppanchen/Projects/NPuzzle/headers/CommonTools.h">
+		<Unit filename="/Users/ppanchen/Projects/NPuzzle_git/headers/CommonHeader.h">
 			<Option target="NPuzzle"/>
 		</Unit>
-		<Unit filename="/Users/ppanchen/Projects/NPuzzle/headers/Drawer.h">
+		<Unit filename="/Users/ppanchen/Projects/NPuzzle_git/headers/Logger.h">
 			<Option target="NPuzzle"/>
 		</Unit>
-		<Unit filename="/Users/ppanchen/Projects/NPuzzle/headers/IDrawer.h">
+		<Unit filename="/Users/ppanchen/Projects/NPuzzle_git/headers/Parser.h">
 			<Option target="NPuzzle"/>
 		</Unit>
-		<Unit filename="/Users/ppanchen/Projects/NPuzzle/headers/Solver.h">
+		<Unit filename="/Users/ppanchen/Projects/NPuzzle_git/headers/Solver.h">
 			<Option target="NPuzzle"/>
 		</Unit>
-		<Unit filename="/Users/ppanchen/Projects/NPuzzle/sources/Board.cpp">
+		<Unit filename="/Users/ppanchen/Projects/NPuzzle_git/sources/Board.cpp">
 			<Option target="NPuzzle"/>
 		</Unit>
-		<Unit filename="/Users/ppanchen/Projects/NPuzzle/sources/CommonTools.cpp">
+		<Unit filename="/Users/ppanchen/Projects/NPuzzle_git/sources/Logger.cpp">
 			<Option target="NPuzzle"/>
 		</Unit>
-		<Unit filename="/Users/ppanchen/Projects/NPuzzle/sources/Drawer.cpp">
+		<Unit filename="/Users/ppanchen/Projects/NPuzzle_git/sources/Parser.cpp">
 			<Option target="NPuzzle"/>
 		</Unit>
-		<Unit filename="/Users/ppanchen/Projects/NPuzzle/sources/Solver.cpp">
+		<Unit filename="/Users/ppanchen/Projects/NPuzzle_git/sources/Solver.cpp">
 			<Option target="NPuzzle"/>
 		</Unit>
-		<Unit filename="/Users/ppanchen/Projects/NPuzzle/sources/main.cpp">
+		<Unit filename="/Users/ppanchen/Projects/NPuzzle_git/sources/main.cpp">
 			<Option target="NPuzzle"/>
 		</Unit>
-		<Unit filename="/Users/ppanchen/Projects/NPuzzle/CMakeLists.txt">
+		<Unit filename="/Users/ppanchen/Projects/NPuzzle_git/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

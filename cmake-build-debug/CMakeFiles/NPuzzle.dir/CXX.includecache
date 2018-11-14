@@ -6,25 +6,43 @@
 
 #IncludeRegexTransform: 
 
-/Users/ppanchen/Projects/NPuzzle/headers/Board.h
-CommonTools.h
-/Users/ppanchen/Projects/NPuzzle/headers/CommonTools.h
+/Users/ppanchen/Projects/NPuzzle_git/headers/Board.h
 set
 -
 iostream
 -
 map
 -
-
-/Users/ppanchen/Projects/NPuzzle/headers/CommonTools.h
-memory
+vector
 -
+CommonHeader.h
+/Users/ppanchen/Projects/NPuzzle_git/headers/CommonHeader.h
+
+/Users/ppanchen/Projects/NPuzzle_git/headers/CommonHeader.h
 vector
 -
 
-/Users/ppanchen/Projects/NPuzzle/sources/Board.cpp
-../headers/Board.h
-/Users/ppanchen/Projects/NPuzzle/headers/Board.h
-sstream
-/Users/ppanchen/Projects/NPuzzle/sources/sstream
+/Users/ppanchen/Projects/NPuzzle_git/headers/Logger.h
+
+/Users/ppanchen/Projects/NPuzzle_git/headers/Solver.h
+utility
+-
+Board.h
+/Users/ppanchen/Projects/NPuzzle_git/headers/Board.h
+list
+/Users/ppanchen/Projects/NPuzzle_git/headers/list
+
+/Users/ppanchen/Projects/NPuzzle_git/sources/Solver.cpp
+../headers/Solver.h
+/Users/ppanchen/Projects/NPuzzle_git/headers/Solver.h
+../headers/Logger.h
+/Users/ppanchen/Projects/NPuzzle_git/headers/Logger.h
+functional
+-
+queue
+-
+vector
+-
+iostream
+-
 

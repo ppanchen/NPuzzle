@@ -2,8 +2,10 @@
 // Created by Petro Panchenko on 11/7/18.
 //
 
+#include <sstream>
+#include <vector>
 #include "../headers/Board.h"
-#include "sstream"
+#include "../headers/Logger.h"
 
 int Board::_size = 0;
 Matrix Board::_aimBlocks;
@@ -33,10 +35,10 @@ bool Board::operator==(const Board& other) const
 std::set<std::shared_ptr<Board>> Board::neighbors()
 {
     std::set<std::shared_ptr<Board>> boardList;
-    boardList.insert(swap(getNewBlock(), _zeroX, _zeroY, _zeroX, _zeroY + 1));
-    boardList.insert(swap(getNewBlock(), _zeroX, _zeroY, _zeroX, _zeroY - 1));
-    boardList.insert(swap(getNewBlock(), _zeroX, _zeroY, _zeroX - 1, _zeroY));
-    boardList.insert(swap(getNewBlock(), _zeroX, _zeroY, _zeroX + 1, _zeroY));
+    boardList.insert(swap(_blocks, _zeroX, _zeroY, _zeroX, _zeroY + 1));
+    boardList.insert(swap(_blocks, _zeroX, _zeroY, _zeroX, _zeroY - 1));
+    boardList.insert(swap(_blocks, _zeroX, _zeroY, _zeroX - 1, _zeroY));
+    boardList.insert(swap(_blocks, _zeroX, _zeroY, _zeroX + 1, _zeroY));
 
     return boardList;
 }
@@ -121,7 +123,7 @@ void Board::init(const Matrix &block)
             switch (Board::_algorithmFlag)
             {
                 case Algorithm::Manhattan:
-                    _h += 10;
+//                    _h += 10;
                 case Algorithm::Hamming:
                     if (_blocks[i][j] != _aimBlocks[i][j] && _blocks[i][j] != 0)
                         _h += 1;
@@ -137,11 +139,6 @@ void Board::init(const Matrix &block)
     }
 }
 
-Matrix Board::getNewBlock()
-{
-    return Matrix(_blocks);
-}
-
 std::shared_ptr<Board> Board::swap(Matrix blocks2, int x1, int y1, int x2, int y2)
 {
     if (x2 > -1 && x2 < dimension() && y2 > -1 && y2 < dimension())
@@ -149,6 +146,7 @@ std::shared_ptr<Board> Board::swap(Matrix blocks2, int x1, int y1, int x2, int y
         int t = blocks2[x2][y2];
         blocks2[x2][y2] = blocks2[x1][y1];
         blocks2[x1][y1] = t;
+        Logger::memoryCount++;
         return std::make_shared<Board>(blocks2);
     }
     else
@@ -173,4 +171,154 @@ std::ostream& operator<<(std::ostream& os, const Board& board)
 int Board::Manhattan(int, int)
 {
     return 0;
+}
+
+int Board::inversions()
+{
+    std::vector<int> order;
+
+    for (int i = 0; i < _size ; i++)
+    {
+        for (int j = 0; j < _size ; j++)
+        {
+            order.push_back(_blocks[i][j]);
+        }
+    }
+
+    int inversions = 0;
+    for (int i = 0; i < order.size() - 1; i++)
+    {
+        for (int j = i + 1; j < order.size(); j++)
+        {
+            if (order[i] > order[j] && order[j] != 0)
+            {
+                inversions++;
+            }
+        }
+    }
+    return inversions;
+}
+
+bool Board::isSolvable()
+{
+    int s = 1;
+    std::vector<int> order;
+
+//    for (int y = 0; y < _size; y++)
+//    {
+//        order.push_back(_blocks[0][y]);
+//        s++;
+//    }
+//    for (int x = 1; x < _size; x++)
+//    {
+//        order.push_back(_blocks[x][_size - 1]);
+//        s++;
+//    }
+//    for (int y = _size - 2; y >= 0; y--)
+//    {
+//        order.push_back(_blocks[_size - 1][y]);
+//        s++;
+//    }
+//    for (int x = _size - 2; x > 0; x--)
+//    {
+//        order.push_back(_blocks[x][0]);
+//        s++;
+//    }
+//
+//    int c = 1;
+//    int d = 1;
+//
+//    while (s < _size * _size)
+//    {
+//        while (d + 1 != _blocks[c].size())
+//        {
+//            order.push_back(_blocks[c][d++]);
+//            s++;
+//        }
+//        d--;
+//        c++;
+//        while (c + 1 != _blocks.size())
+//        {
+//            order.push_back(_blocks[c++][d]);
+//            s++;
+//        }
+//        c--;
+//        d++;
+//        while (d != 1)
+//        {
+//            order.push_back(_blocks[c][d--]);
+//            s++;
+//        }
+//        d++;
+//        while (c != 1)
+//        {
+//            order.push_back(_blocks[c--][d]);
+//            s++;
+//        }
+//        c++;
+//    }
+//
+//    for (int i = 0; i < _size * _size ; i++)
+//    {
+//        if (std::find(order.begin(), order.end(), i) == order.end())
+//        {
+//            order.push_back(i);
+//            break ;
+//        }
+//    }
+
+
+//second variant
+//    while (s < _size * _size)
+//    {
+//        for (int i = 0; i < _size ; i++)
+//        {
+//            for (int j = 0; j < _size ; j++)
+//            {
+//                if (_aimBlocks[i][j] == s)
+//                {
+//                    order.push_back(_blocks[i][j]);
+//                    s++;
+//                }
+//            }
+//        }
+//    }
+//    s = 0;
+//
+//    for (int i = 0; i < _size ; i++)
+//    {
+//        for (int j = 0; j < _size ; j++)
+//        {
+//            if (_aimBlocks[i][j] == s)
+//            {
+//                order.push_back(_blocks[i][j]);
+//                break ;
+//            }
+//        }
+//    }
+
+//    int inversions = 0;
+//    for (int i = 0; i < order.size() - 1; i++)
+//    {
+//        for (int j = i + 1; j < order.size(); j++)
+//        {
+//            if (order[i] > order[j] && order[j] != 0)
+//            {
+//                inversions++;
+//                break ;
+//            }
+//        }
+//    }
+////    return true;
+    Board aimBoard (_aimBlocks);
+    int orInversion = aimBoard.inversions();
+    int inversion = this->inversions();
+    if (_size  & 1)
+    {
+        return ((inversion & 1) == (orInversion & 1));
+    }
+    else
+    {
+        return (((inversion + (_size * _size - (_zeroY * _size + _zeroX))) & 1) == ((orInversion + (_size * _size - (aimBoard._zeroY * _size + aimBoard._zeroX)))  & 1));
+    }
 }

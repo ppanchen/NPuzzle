@@ -4,12 +4,11 @@
 
 #ifndef NPUZZLE_BOARD_H
 #define NPUZZLE_BOARD_H
-#include "CommonTools.h"
 #include <set>
 #include <iostream>
 #include <map>
-
-using Matrix = std::vector<std::vector<int>>;
+#include <vector>
+#include "CommonHeader.h"
 
 enum Algorithm
 {
@@ -51,10 +50,11 @@ public:
 
     friend std::ostream& operator<<(std::ostream& os, const Board& board);
 
-private:
-    void init(const Matrix &block);
+    bool isSolvable();
 
-    Matrix getNewBlock();
+private:
+    int inversions();
+    void init(const Matrix &block);
 
     std::shared_ptr<Board> swap(Matrix blocks2, int x1, int y1, int x2, int y2);
 
