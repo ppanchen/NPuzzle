@@ -36,7 +36,7 @@ public:
 private:
     static int listDepth(Item item);
     void itemToList(Item item);
-    bool containsInPath(Item item, Board board);
+    bool containsInPath(Item item, Board *board);
 
 };
 

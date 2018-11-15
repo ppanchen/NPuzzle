@@ -6,29 +6,43 @@
 
 int main(int argc, char* argv[])
 {
-//    Matrix blocks
-//    {
-//        {2, 0, 3},
-//        {1, 8, 4},
-//        {7, 6, 5}
-//    };
-
-    Parser parser(argc, argv);
-
-    if (!parser.isFileValid())
+    try
     {
-        std::cout << "File is invalid" << std::endl;
+        Parser parser(argc, argv);
+        if (parser.getHelpRequired())
+        {
+            std::cout << "Usage: " << std::endl
+                      << "Args:" << std::endl
+                      << "\t-inputfile [file]" << std::endl
+                      << "\t-algorithm [algorithm] " << std::endl
+                      << "\t-help" << std::endl
+                      << "Where:" << std::endl
+                      << "\t[file] - any file with puzzle" << std::endl
+                      << "\t[algorithm] - Manhhattan|Hamming|Euclidean or 1|2|3" << std::endl
+                      << "\t-help - show this window" << std::endl;
+            return 0;
+
+        }
+        if (!parser.isFileValid())
+        {
+            std::cout << "File is invalid" << std::endl;
+            return 0;
+        }
+        std::cout << "Chosen algorithm : "<< parser.getAlgorithm() << std::endl;
+        Board::staticInit(parser.getSize(), parser.getAlgorithm());
+        Solver *solver = new Solver(std::make_shared<Board>(parser.getMatrix()));
+        for (const auto &boards : solver->solution())
+        {
+            std::cout << boards;
+        }
+        std::cout << "Steps: " << solver->moves() << std::endl;
+
+        Logger::printStatistic();
         return 0;
     }
-
-    Board::staticInit(parser.getSize(), parser.getAlgorithm());
-    Solver *solver = new Solver(std::make_shared<Board>(parser.getMatrix()));
-    for (const auto &boards : solver->solution())
+    catch (std::exception &ex)
     {
-        std::cout << boards;
+        std::cout << ex.what() << std::endl;
     }
-    std::cout << "Steps: " << solver->moves() << std::endl;
 
-    Logger::printStatistic();
-    return 0;
 }
