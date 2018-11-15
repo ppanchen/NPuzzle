@@ -14,7 +14,7 @@ enum Algorithm
 {
     Manhattan = 1,
     Hamming,
-    Own
+    Euclidean
 };
 
 class Board
@@ -58,8 +58,8 @@ private:
 
     std::shared_ptr<Board> swap(Matrix blocks2, int x1, int y1, int x2, int y2);
 
-    int Manhattan(int, int);
-
+    int Manhattan(int x, int y);
+    int Euclidean(int x, int y);
 
 };
 

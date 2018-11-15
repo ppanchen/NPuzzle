@@ -4,6 +4,7 @@
 
 #include <sstream>
 #include <vector>
+#include <cmath>
 #include "../headers/Board.h"
 #include "../headers/Logger.h"
 
@@ -123,12 +124,12 @@ void Board::init(const Matrix &block)
             switch (Board::_algorithmFlag)
             {
                 case Algorithm::Manhattan:
-//                    _h += 10;
+                    _h += Manhattan(i, j);
                 case Algorithm::Hamming:
                     if (_blocks[i][j] != _aimBlocks[i][j] && _blocks[i][j] != 0)
                         _h += 1;
-                case Algorithm::Own:
-                    ;
+                case Algorithm::Euclidean:
+                    _h += Euclidean(i, j);
             }
             if (_blocks[i][j] == 0)
             {
@@ -168,8 +169,27 @@ std::ostream& operator<<(std::ostream& os, const Board& board)
     return os;
 }
 
-int Board::Manhattan(int, int)
+int Board::Manhattan(int x, int y)
 {
+    for (int i = 0; i < _size; i++) {
+        for (int j = 0; j < _size; j++) {
+            if (_aimBlocks[i][j] == _blocks[x][y]) {
+                return abs(i - x) + abs(j - y);
+            }
+        }
+    }
+    return 0;
+}
+
+int Board::Euclidean(int x, int y)
+{
+    for (int i = 0; i < _size; i++) {
+        for (int j = 0; j < _size; j++) {
+            if (_aimBlocks[i][j] == _blocks[x][y]) {
+                return (int)sqrt((i - x) * (i - x) + (j - y) * (j - y));
+            }
+        }
+    }
     return 0;
 }
 
