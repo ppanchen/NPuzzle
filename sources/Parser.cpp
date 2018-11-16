@@ -118,9 +118,8 @@ bool Parser::isFileValid()
             }
         }
     }
-    return true;
 
-
+    return isMatrixValid();
 }
 
 Matrix Parser::getMatrix()
@@ -171,4 +170,19 @@ std::string Parser::getNextArg(int i, int argc, char **argv)
         throw std::invalid_argument("Arguments error!");
 }
 
-
+bool Parser::isMatrixValid()
+{
+    int s = 0;
+    while (s < _size * _size)
+    {
+        bool wasFound = false;
+        for(const auto &vector : _matrix)
+        {
+            wasFound |= std::find(vector.begin(), vector.end(), s) != vector.end();
+        }
+        if (!wasFound)
+            return false;
+        s++;
+    }
+    return true;
+}
