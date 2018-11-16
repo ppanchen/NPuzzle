@@ -33,6 +33,7 @@ private:
     std::string getNextArg(int i, int argc, char *argv[]);
     void removeComments(std::string &line);
     bool equals(std::string s1, std::string s2);
+    bool isMatrixValid();
 };
 
 
