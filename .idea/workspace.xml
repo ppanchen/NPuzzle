@@ -11,14 +11,16 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d42cc3c-14ae-41e8-8278-54862fef9c6d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/headers/Board.h" beforeDir="false" afterPath="$PROJECT_DIR$/headers/Board.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/headers/Parser.h" beforeDir="false" afterPath="$PROJECT_DIR$/headers/Parser.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/headers/Solver.h" beforeDir="false" afterPath="$PROJECT_DIR$/headers/Solver.h" afterDir="false" />
+    <list default="true" id="7d42cc3c-14ae-41e8-8278-54862fef9c6d" name="Default Changelist" comment="- a lot of changes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/NPuzzle.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/NPuzzle.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/NPuzzle.dir/sources/Board.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/NPuzzle.dir/sources/Parser.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/NPuzzle.dir/sources/Parser.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/NPuzzle.dir/sources/Solver.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/NPuzzle" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/NPuzzle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sources/Board.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sources/Board.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sources/Parser.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sources/Parser.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sources/Solver.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sources/Solver.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sources/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sources/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,12 +43,14 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="__config" value="1" />
+          <entry key="algorithm" value="1" />
           <entry key="cpp" value="6" />
-          <entry key="h" value="7" />
+          <entry key="h" value="9" />
           <entry key="iosfwd" value="1" />
           <entry key="memory" value="2" />
           <entry key="new" value="1" />
           <entry key="py" value="1" />
+          <entry key="queue" value="1" />
           <entry key="streambuf" value="1" />
           <entry key="string" value="1" />
           <entry key="vector" value="1" />
@@ -54,12 +58,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="ObjectiveC" value="21" />
+          <entry key="ObjectiveC" value="25" />
           <entry key="Python" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+
           <entry key="cpp" value="3990" />
           <entry key="h" value="724" />
           <entry key="mm" value="15" />
@@ -70,7 +75,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Doxygen file" value="1" />
-          <entry key="ObjectiveC" value="4728" />
+          <entry key="ObjectiveC" value="4728" />r
           <entry key="PLAIN_TEXT" value="19" />
           <entry key="Python" value="2" />
         </counts>
@@ -125,8 +130,9 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/headers/Board.h">
+        <entry file="file:///usr/include/stdlib.h">
           <provider selected="true" editor-type-id="text-editor">
+
             <state relative-caret-position="195">
               <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
               <folding>
@@ -181,6 +187,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file:///Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/queue">
           <provider selected="true" editor-type-id="text-editor">
+
             <state relative-caret-position="10650">
               <caret line="710" selection-start-line="710" selection-end-line="710" />
             </state>
@@ -188,6 +195,12 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>memoryCount</find>
+      <find>timeCount</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -282,7 +295,7 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NPuzzle" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-inputfile ../../n_puzzle/examples/puzzle_invalid" PASS_PARENT_ENVS_2="true" PROJECT_NAME="NPuzzle" TARGET_NAME="NPuzzle" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="NPuzzle" RUN_TARGET_NAME="NPuzzle">
+    <configuration name="NPuzzle" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-inputfile ../../n_puzzle/examples/puzzle_4_s" PASS_PARENT_ENVS_2="true" PROJECT_NAME="NPuzzle" TARGET_NAME="NPuzzle" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="NPuzzle" RUN_TARGET_NAME="NPuzzle">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -300,7 +313,7 @@
       <option name="presentableId" value="Default" />
       <updated>1542201805617</updated>
       <workItem from="1542201814277" duration="21754000" />
-      <workItem from="1542390693576" duration="820000" />
+      <workItem from="1542390693576" duration="10214000" />
     </task>
     <task id="LOCAL-00001" summary="- a lot of changes">
       <created>1542227183093</created>
@@ -336,12 +349,12 @@
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.8145353" visible="true" weight="0.29124087" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.329927" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49960285" weight="0.329927" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.4805401" weight="0.329927" />
+      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.449166" weight="0.329927" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4988086" weight="0.329927" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.18546465" side_tool="true" visible="true" weight="0.29124087" />
-      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49960285" weight="0.329927" />
+      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49960285" weight="0.329927" />r
       <window_info anchor="bottom" id="CMake" order="12" sideWeight="0.4992057" weight="0.329927" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -385,9 +398,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/sources/Parser.cpp</url>
-          <line>174</line>
-          <option name="timeStamp" value="2" />
+          <url>file://$PROJECT_DIR$/sources/Solver.cpp</url>
+          <line>44</line>
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -395,6 +408,7 @@
       <configuration name="CMakeRunConfiguration">
         <watch expression="_size - _zeroY" language="ObjectiveC" />
         <watch expression="_size - _zeroX" language="ObjectiveC" />
+        <watch expression="priorityQueue.c[11].__ptr_-&gt;_board.__ptr_-&gt;_h" />
       </configuration>
     </watches-manager>
   </component>
@@ -510,47 +524,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sources/Board.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5985">
-          <caret line="315" selection-start-line="315" selection-end-line="315" />
-          <folding>
-            <element signature="e#49#67#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/headers/Board.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
-          <folding>
-            <element signature="e#97#111#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/generator.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sources/Solver.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
           <folding>
-            <element signature="e#49#79#0" expanded="true" />
+            <element signature="e#24#34#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/headers/Parser.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        <state relative-caret-position="195">
+          <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
           <folding>
             <element signature="e#101#118#0" expanded="true" />
           </folding>
@@ -559,20 +546,75 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sources/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="32" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
+        <state relative-caret-position="152">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/algorithm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="693">
+          <caret line="4976" selection-start-line="4976" selection-end-line="4976" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/queue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="710" selection-start-line="710" selection-end-line="710" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/headers/Solver.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="22" column="69" selection-start-line="22" selection-start-column="69" selection-end-line="22" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/headers/Board.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#97#111#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sources/Parser.cpp">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <folding>
+            <element signature="e#50#80#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/stdlib.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="136" column="7" selection-start-line="136" selection-start-column="7" selection-end-line="136" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/Board.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" column="32" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
+          <folding>
+            <element signature="e#49#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/Solver.cpp">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="24" selection-start-line="24" selection-end-line="24" />
           <folding>
-            <element signature="e#50#80#0" expanded="true" />
+            <element signature="e#49#79#0" expanded="true" />
           </folding>
         </state>
       </provider>
