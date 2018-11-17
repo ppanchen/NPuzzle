@@ -22,25 +22,27 @@ CommonHeader.h
 vector
 -
 
-/Users/ppanchen/Projects/NPuzzle_git/headers/Parser.h
-string
+/Users/ppanchen/Projects/NPuzzle_git/headers/Logger.h
+
+/Users/ppanchen/Projects/NPuzzle_git/headers/Solver.h
+utility
 -
-../headers/CommonHeader.h
-/Users/ppanchen/Projects/NPuzzle_git/headers/CommonHeader.h
 Board.h
 /Users/ppanchen/Projects/NPuzzle_git/headers/Board.h
+list
+/Users/ppanchen/Projects/NPuzzle_git/headers/list
 
-/Users/ppanchen/Projects/NPuzzle_git/sources/Parser.cpp
-../headers/Parser.h
-/Users/ppanchen/Projects/NPuzzle_git/headers/Parser.h
-stdexcept
+/Users/ppanchen/Projects/NPuzzle_git/sources/Solver.cpp
+../headers/Solver.h
+/Users/ppanchen/Projects/NPuzzle_git/headers/Solver.h
+../headers/Logger.h
+/Users/ppanchen/Projects/NPuzzle_git/headers/Logger.h
+functional
+-
+queue
+-
+vector
 -
 iostream
--
-fstream
--
-sstream
--
-regex
 -
 

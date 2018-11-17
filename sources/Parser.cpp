@@ -168,6 +168,7 @@ std::string Parser::getNextArg(int i, int argc, char **argv)
     }
     else
         throw std::invalid_argument("Arguments error!");
+    return nullptr;
 }
 
 bool Parser::isMatrixValid()
