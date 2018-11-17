@@ -10,6 +10,12 @@
 #include "Board.h"
 #include "list"
 
+enum Algorithm
+{
+    Uniform = 1,
+    Greedy
+};
+
 class Solver
 {
 private:
@@ -27,8 +33,10 @@ private:
         };
     };
 
+    std::function<bool(std::shared_ptr<Item> i1, std::shared_ptr<Item> i2)> comparator;
+
 public:
-    Solver(std::shared_ptr<Board> initial);
+    Solver(std::shared_ptr<Board> initial, Algorithm a);
     bool isSolvable();
     int moves();
     std::list<Board> solution();

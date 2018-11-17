@@ -13,33 +13,55 @@ Parser::Parser(int argc, char **argv)
 {
     std::string supportedArgs[]
             {
-                "-INPUTFILE",
-                "-ALGORITHM",
+                "-INPUTFILE", "-I",
+                "-HEURISTIC", "-H",
+                "-ALGORITHM", "-A",
                 "-HELP"
             };
+
+    //if first argument is not in supportedArgs array, that means this is inputfile
+    if (argc > 1)
+    {
+        std::string *res = std::find(supportedArgs, supportedArgs + 7, argv[1]);
+        if (res == supportedArgs + 7)
+        {
+            _filename = argv[1];
+            _readFromInput = false;
+        }
+    }
+
 
     for (int i = 1; i < argc; i++)
     {
         std::string argument(argv[i]);
 
-        if (equals(argument, supportedArgs[0])) //-INPUTFILE processing
+        if (equals(argument, supportedArgs[0]) || equals(argument, supportedArgs[1])) //-INPUTFILE processing
         {
             _filename = getNextArg(i, argc, argv);
             _readFromInput = false;
         }
 
-        else if (equals(argument, supportedArgs[1])) //-ALGORITHM processing
+        else if (equals(argument, supportedArgs[2]) || equals(argument, supportedArgs[3])) //-HEURISIC processing
         {
             std::string algoName = getNextArg(i, argc, argv);
             if (equals(algoName, "Manhhattan") || equals(algoName, "1"))
-                _algo = Algorithm::Manhattan;
+                _heur = Heuristic::Manhattan;
             else if (equals(algoName, "Hamming") || equals(algoName, "2"))
-                _algo = Algorithm::Hamming;
+                _heur = Heuristic::Hamming;
             else if (equals(algoName, "Euclidean") || equals(algoName, "3"))
-                _algo = Algorithm::Euclidean;
+                _heur = Heuristic::Euclidean;
         }
 
-        else if (equals(argument, supportedArgs[2])) //-HELP processing
+        else if (equals(argument, supportedArgs[4]) || equals(argument, supportedArgs[5])) //-ALGORITHM processing
+        {
+            std::string algoName = getNextArg(i, argc, argv);
+            if (equals(algoName, "Uniform") || equals(algoName, "1"))
+                _algo = Algorithm::Uniform;
+            else if (equals(algoName, "Greedy") || equals(algoName, "2"))
+                _algo = Algorithm::Greedy;
+        }
+
+        else if (equals(argument, supportedArgs[6])) //-HELP processing
         {
             _helpRequired = true;
         }
@@ -132,6 +154,11 @@ unsigned int Parser::getSize()
     return _size;
 }
 
+Heuristic Parser::getHeuristic()
+{
+    return _heur;
+}
+
 Algorithm Parser::getAlgorithm()
 {
     return _algo;
@@ -161,7 +188,7 @@ bool Parser::equals(std::string s1, std::string s2)
 std::string Parser::getNextArg(int i, int argc, char **argv)
 {
     int next = i + 1;
-    if (next< argc)
+    if (next < argc)
     {
         if (argv[next][0] != '-')
             return argv[next];

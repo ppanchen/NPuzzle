@@ -8,6 +8,7 @@
 #include <string>
 #include "../headers/CommonHeader.h"
 #include "Board.h"
+#include "Solver.h"
 
 
 class Parser
@@ -19,6 +20,7 @@ public:
     bool isFileValid();
     Matrix getMatrix();
     unsigned int getSize();
+    Heuristic getHeuristic();
     Algorithm getAlgorithm();
     bool getHelpRequired();
 
@@ -26,7 +28,8 @@ private:
     bool _readFromInput = true;
     std::string _filename;
     Matrix _matrix;
-    Algorithm _algo = Algorithm::Manhattan;
+    Heuristic _heur = Heuristic::Manhattan;
+    Algorithm _algo = Algorithm::Uniform;
     unsigned _size = 0;
     bool _helpRequired = false;
 

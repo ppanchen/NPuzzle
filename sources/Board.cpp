@@ -10,7 +10,7 @@
 
 int Board::_size = 0;
 Matrix Board::_aimBlocks;
-Algorithm Board::_algorithmFlag;
+Heuristic Board::_algorithmFlag;
 
 /// Copy constructor
 /// \param b2 - instance to be copied
@@ -44,7 +44,7 @@ std::set<std::shared_ptr<Board>> Board::neighbors()
     return boardList;
 }
 
-void Board::staticInit(unsigned size, Algorithm algoFlag)
+void Board::staticInit(unsigned size, Heuristic algoFlag)
 {
     _algorithmFlag = algoFlag;
     _size = size;
@@ -123,13 +123,16 @@ void Board::init(const Matrix &block)
         {
             switch (Board::_algorithmFlag)
             {
-                case Algorithm::Manhattan:
+                case Heuristic::Manhattan:
                     _h += Manhattan(i, j);
-                case Algorithm::Hamming:
+                    break;
+                case Heuristic::Hamming:
                     if (_blocks[i][j] != _aimBlocks[i][j] && _blocks[i][j] != 0)
                         _h += 1;
-                case Algorithm::Euclidean:
+                    break;
+                case Heuristic::Euclidean:
                     _h += Euclidean(i, j);
+                    break;
             }
             if (_blocks[i][j] == 0)
             {
@@ -147,7 +150,6 @@ std::shared_ptr<Board> Board::swap(Matrix blocks2, int x1, int y1, int x2, int y
         int t = blocks2[x2][y2];
         blocks2[x2][y2] = blocks2[x1][y1];
         blocks2[x1][y1] = t;
-        Logger::memoryCount++;
         return std::make_shared<Board>(blocks2);
     }
     else
@@ -173,7 +175,7 @@ int Board::Manhattan(int x, int y)
 {
     for (int i = 0; i < _size; i++) {
         for (int j = 0; j < _size; j++) {
-            if (_aimBlocks[i][j] == _blocks[x][y]) {
+            if (_aimBlocks[i][j] == _blocks[x][y] && _blocks[x][y] != 0) {
                 return abs(i - x) + abs(j - y);
             }
         }
@@ -185,7 +187,7 @@ int Board::Euclidean(int x, int y)
 {
     for (int i = 0; i < _size; i++) {
         for (int j = 0; j < _size; j++) {
-            if (_aimBlocks[i][j] == _blocks[x][y]) {
+            if (_aimBlocks[i][j] == _blocks[x][y] && _blocks[x][y] != 0) {
                 return (int)sqrt((i - x) * (i - x) + (j - y) * (j - y));
             }
         }

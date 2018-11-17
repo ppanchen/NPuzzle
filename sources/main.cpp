@@ -14,11 +14,13 @@ int main(int argc, char* argv[])
             std::cout << "Usage: " << std::endl
                       << "Args:" << std::endl
                       << "\t-inputfile [file]" << std::endl
-                      << "\t-algorithm [algorithm] " << std::endl
+                      << "\t-heuristic [heuristic] " << std::endl
+                      << "\t-algorithm [heuristic] " << std::endl
                       << "\t-help" << std::endl
                       << "Where:" << std::endl
                       << "\t[file] - any file with puzzle" << std::endl
-                      << "\t[algorithm] - Manhhattan|Hamming|Euclidean or 1|2|3" << std::endl
+                      << "\t[heuristic] - Manhhattan|Hamming|Euclidean or 1|2|3" << std::endl
+                      << "\t[algorithm] - Greedy|Uniform or 1|2" << std::endl
                       << "\t-help - show this window" << std::endl;
             return 0;
 
@@ -28,9 +30,10 @@ int main(int argc, char* argv[])
             std::cout << "File is invalid" << std::endl;
             return 0;
         }
+        std::cout << "Chosen heuristic : "<< parser.getHeuristic() << std::endl;
         std::cout << "Chosen algorithm : "<< parser.getAlgorithm() << std::endl;
-        Board::staticInit(parser.getSize(), parser.getAlgorithm());
-        Solver *solver = new Solver(std::make_shared<Board>(parser.getMatrix()));
+        Board::staticInit(parser.getSize(), parser.getHeuristic());
+        Solver *solver = new Solver(std::make_shared<Board>(parser.getMatrix()), parser.getAlgorithm());
         for (const auto &boards : solver->solution())
         {
             std::cout << boards;

@@ -10,7 +10,7 @@
 #include <vector>
 #include "CommonHeader.h"
 
-enum Algorithm
+enum Heuristic
 {
     Manhattan = 1,
     Hamming,
@@ -22,7 +22,7 @@ class Board
 private:
     static Matrix _aimBlocks;
     static int _size;
-    static Algorithm _algorithmFlag;
+    static Heuristic _algorithmFlag;
 
     Matrix _blocks;
     int _zeroX = 0;
@@ -46,7 +46,7 @@ public:
 
     std::set<std::shared_ptr<Board>> neighbors();
 
-    static void staticInit(unsigned size, Algorithm algorithmFlag);
+    static void staticInit(unsigned size, Heuristic algorithmFlag);
 
     friend std::ostream& operator<<(std::ostream& os, const Board& board);
 
