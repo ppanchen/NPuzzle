@@ -9,28 +9,37 @@
 #include <vector>
 #include <iostream>
 
-Solver::Solver(std::shared_ptr<Board> initial)
+Solver::Solver(std::shared_ptr<Board> initial, Algorithm algo)
 {
     this->_initial = initial;
 
     if(!initial->isSolvable())
         return;
 
-    auto tmp = [](std::shared_ptr<Item> i1, std::shared_ptr<Item> i2)
+    comparator = [&](std::shared_ptr<Item> i1, std::shared_ptr<Item> i2)
             {
-                int steps1 = listDepth(*(i1.get()));
-                int steps2 = listDepth(*(i2.get()));
+                if (algo == Algorithm::Uniform)
+                {
+                    int steps1 = listDepth(*(i1.get()));
+                    int steps2 = listDepth(*(i2.get()));
 
-                int a1 = steps1 + i1->_board->h();
-                int a2 = steps2 + i2->_board->h();
+                    int a1 = steps1 + i1->_board->h();
+                    int a2 = steps2 + i2->_board->h();
 
-                if (a1 == a2)
-                    return i1->_board->h() < i2->_board->h();
+                    if (a1 == a2)
+                        return i1->_board->h() < i2->_board->h();
+                    else
+                        return a1 > a2;
+                }
+                else if (algo == Algorithm::Greedy)
+                {
+                    return i1->_board->h() > i2->_board->h();
+                }
                 else
-                    return a1 > a2;
+                    return false;
             };
 
-    std::priority_queue<std::shared_ptr<Item>, std::deque<std::shared_ptr<Item>>, decltype(tmp)> priorityQueue(tmp);
+    std::priority_queue<std::shared_ptr<Item>, std::deque<std::shared_ptr<Item>>, decltype(comparator )> priorityQueue(comparator);
 
     priorityQueue.push(std::make_shared<Item>(nullptr, initial));
     while (true)

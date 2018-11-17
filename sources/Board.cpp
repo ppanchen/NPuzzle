@@ -10,7 +10,7 @@
 
 int Board::_size = 0;
 Matrix Board::_aimBlocks;
-Algorithm Board::_algorithmFlag;
+Heuristic Board::_algorithmFlag;
 
 /// Copy constructor
 /// \param b2 - instance to be copied
@@ -44,7 +44,7 @@ std::set<std::shared_ptr<Board>> Board::neighbors()
     return boardList;
 }
 
-void Board::staticInit(unsigned size, Algorithm algoFlag)
+void Board::staticInit(unsigned size, Heuristic algoFlag)
 {
     _algorithmFlag = algoFlag;
     _size = size;
@@ -123,14 +123,14 @@ void Board::init(const Matrix &block)
         {
             switch (Board::_algorithmFlag)
             {
-                case Algorithm::Manhattan:
+                case Heuristic::Manhattan:
                     _h += Manhattan(i, j);
                     break;
-                case Algorithm::Hamming:
+                case Heuristic::Hamming:
                     if (_blocks[i][j] != _aimBlocks[i][j] && _blocks[i][j] != 0)
-                        _h += _size;
+                        _h += 1;
                     break;
-                case Algorithm::Euclidean:
+                case Heuristic::Euclidean:
                     _h += Euclidean(i, j);
                     break;
             }
